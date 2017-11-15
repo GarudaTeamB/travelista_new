@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AppTheme"
+    tools:context="com.phedev.app.travelista.DetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/image_height">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon_detail"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="@dimen/icon"
+                    android:layout_height="@dimen/icon"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_start"
+                    android:contentDescription="@string/image_detail"
+                    android:src="@drawable/ic_creativity" />
+
+                <TextView
+                    android:id="@+id/konten_detail_by"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_start"
+                    android:gravity="center|start"
+                    android:text="@string/konten_teks"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon_detail"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="@dimen/icon"
+                    android:layout_height="@dimen/icon"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_start"
+                    android:contentDescription="@string/image_detail"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:id="@+id/konten_gambar_by"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_start"
+                    android:gravity="center|start"
+                    android:text="@string/image_text"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/deskripsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_start"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="@dimen/margin_start"
+                android:text="@string/descriptive_text"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/image_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_height"
+        android:background="@drawable/pagaruyung"
+        android:contentDescription="@string/image_detail">
+
+        <TextView
+            android:id="@+id/name_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/location_detail"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_start"
+            android:text="@string/place_name"
+            android:textColor="@color/colorWhite"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse.TITLE"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/location_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_start"
+            android:text="@string/location_detail"
+            android:textColor="@color/colorWhite"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
